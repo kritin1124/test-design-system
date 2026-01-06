@@ -1,0 +1,116 @@
+[10:50:28.720] [INFO] [36mInitializing Storybook[39m
+[10:50:28.896] [DEBUG] Getting package.json info for /Users/junior/ds-test/package.json...
+[10:50:28.896] [DEBUG] Getting CLI versions from NPM for storybook...
+[10:50:28.896] [DEBUG] Executing command: npm info storybook version
+[10:50:29.899] [INFO] Adding Storybook version 10.1.11 to your project
+[10:50:29.900] [DEBUG] Project type detected: react
+[10:50:31.398] [PROMPT] We found a .storybook config directory in your project.
+We assume that Storybook is already instantiated for your project. Do you still want to continue and force the initialization? {"choice":true}
+[10:50:31.398] [DEBUG] Using cached package.json for /Users/junior/ds-test/package.json...
+[10:50:31.401] [DEBUG] Using cached package.json for /Users/junior/ds-test/package.json...
+[10:50:31.930] [PROMPT] We were not able to detect the right builder for your project. Please select one: {"choice":"vite"}
+[10:50:31.930] [INFO] Framework detected: react-vite
+[10:50:31.931] [DEBUG] Getting installed version for vitest...
+[10:50:31.931] [DEBUG] Executing command: npm ls --json --depth=99 2>/dev/null
+[10:50:32.135] [DEBUG] Executing command: npm ls --json --depth=0 2>/dev/null
+[10:50:32.291] [DEBUG] An issue occurred while trying to find dependencies metadata using npm: TypeError: Cannot convert undefined or null to object
+[10:50:32.291] [DEBUG] Getting installed version for msw...
+[10:50:32.291] [DEBUG] Executing command: npm ls --json --depth=99 2>/dev/null
+[10:50:32.461] [DEBUG] Executing command: npm ls --json --depth=0 2>/dev/null
+[10:50:32.620] [DEBUG] An issue occurred while trying to find dependencies metadata using npm: TypeError: Cannot convert undefined or null to object
+[10:50:33.053] [PROMPT] New to Storybook? {"choice":true}
+[10:50:33.634] [INFO] base-generator-task-start: Generating Storybook configuration
+[10:50:33.634] [DEBUG] Using cached package.json for /Users/junior/ds-test/package.json...
+[10:50:33.634] [DEBUG] Using cached package.json for /Users/junior/ds-test/package.json...
+[10:50:33.634] [DEBUG] Using cached package.json for /Users/junior/ds-test/package.json...
+[10:50:33.635] [INFO] base-generator-task: - Configuring main.js
+[10:50:33.636] [INFO] base-generator-task: - Configuring preview.js
+[10:50:33.637] [INFO] base-generator-task: - Adding Storybook command to package.json
+[10:50:33.637] [DEBUG] Getting package.json info for /Users/junior/ds-test/package.json...
+[10:50:33.637] [DEBUG] Using cached package.json for /Users/junior/ds-test/package.json...
+[10:50:33.638] [INFO] base-generator-task: - Copying framework templates
+[10:50:33.664] [DEBUG] Executing command: npm config get registry -ws=false -iwr
+[10:50:34.060] [INFO] base-generator-task-success: Storybook configuration generated
+[10:50:34.060] [DEBUG] Using cached package.json for /Users/junior/ds-test/package.json...
+[10:50:34.060] [DEBUG] Using cached installed version for vitest...
+[10:50:34.060] [DEBUG] Getting installed version for @vitest/coverage-v8...
+[10:50:34.060] [DEBUG] Executing command: npm ls --json --depth=99 2>/dev/null
+[10:50:34.278] [DEBUG] Executing command: npm ls --json --depth=0 2>/dev/null
+[10:50:34.438] [DEBUG] An issue occurred while trying to find dependencies metadata using npm: TypeError: Cannot convert undefined or null to object
+[10:50:34.438] [DEBUG] Getting installed version for @vitest/coverage-istanbul...
+[10:50:34.438] [DEBUG] Executing command: npm ls --json --depth=99 2>/dev/null
+[10:50:34.609] [DEBUG] Executing command: npm ls --json --depth=0 2>/dev/null
+[10:50:34.766] [DEBUG] An issue occurred while trying to find dependencies metadata using npm: TypeError: Cannot convert undefined or null to object
+[10:50:34.767] [INFO] adding-dependencies-task-start: Adding dependencies to package.json
+[10:50:34.767] [INFO] adding-dependencies-task: Adding devDependencies:
+- @vitest/coverage-v8@^4.0.16
+[10:50:34.767] [DEBUG] Using cached package.json for /Users/junior/ds-test/package.json...
+[10:50:34.767] [DEBUG] Getting CLI versions from NPM for @vitest/coverage-v8...
+[10:50:34.767] [DEBUG] Executing command: npm info @vitest/coverage-v8 version
+[10:50:35.177] [INFO] adding-dependencies-task-success: Dependencies added to package.json
+[10:50:35.177] [INFO] Installing dependencies...
+[10:50:35.177] [INFO] install-dependencies-spinner-start: Installing dependencies...
+[10:50:35.177] [DEBUG] Executing command: npm install
+[10:50:35.784] [INFO] Installing dependencies...: 
+up to date, audited 308 packages in 516ms
+
+[10:50:35.784] [INFO] install-dependencies-spinner: Installing dependencies...: up to date, audited 308 p
+[10:50:35.784] [INFO] Installing dependencies...: 
+83 packages are looking for funding
+  run `npm fund` for details
+
+[10:50:35.784] [INFO] install-dependencies-spinner: Installing dependencies...: 83 packages are looking f
+[10:50:35.785] [INFO] Installing dependencies...: 
+found 0 vulnerabilities
+
+[10:50:35.785] [INFO] install-dependencies-spinner: Installing dependencies...: found 0 vulnerabilities
+[10:50:35.789] [INFO] Dependencies installed
+[10:50:35.789] [INFO] install-dependencies-spinner-stop: Dependencies installed
+[10:50:35.791] [INFO] configure-addons-task-start: Configuring addons...
+[10:50:35.791] [INFO] configure-addons-task: Configuring @chromatic-com/storybook...
+[10:50:35.793] [INFO] configure-addons-task: @chromatic-com/storybook configured
+
+[10:50:35.793] [INFO] configure-addons-task: Configuring @storybook/addon-vitest...
+[10:50:36.267] [DEBUG] Vitest version specifier: null
+[10:50:36.614] [INFO] 
+[10:50:36.614] [ERROR] Found an existing Vitest setup file:
+./.storybook/vitest.setup.js
+Please refer to the documentation to complete the setup manually:
+https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon#manual-setup
+
+[10:50:36.626] [INFO] Updating your Vitest config file:
+[10:50:36.626] [INFO]   /Users/junior/ds-test/vitest.config.js
+[10:50:36.629] [INFO] Setting up a11y addon for @storybook/addon-vitest
+[10:50:36.629] [INFO] Setting up a11y addon for @storybook/addon-vitest
+[10:50:38.482] [INFO] a11y addon setup successfully
+[10:50:38.482] [INFO] [32ma11y addon setup successfully[39m
+[10:50:38.482] [WARN] Done, but with errors!
+@storybook/addon-vitest was installed successfully, but there were some errors during the setup process. Please refer to the documentation to complete the setup manually and check the errors above:
+https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon#manual-setup
+[10:50:38.482] [INFO] configure-addons-task: Configuring @storybook/addon-a11y...
+[10:50:40.273] [INFO] configure-addons-task: @storybook/addon-a11y configured
+
+[10:50:40.273] [INFO] configure-addons-task: Configuring @storybook/addon-docs...
+[10:50:40.274] [INFO] configure-addons-task: @storybook/addon-docs configured
+
+[10:50:40.274] [INFO] configure-addons-task: Configuring @storybook/addon-onboarding...
+[10:50:40.275] [INFO] configure-addons-task: @storybook/addon-onboarding configured
+
+[10:50:40.275] [ERROR] configure-addons-task-error: Failed to configure addons
+[10:50:40.275] [INFO] [2m✅ @chromatic-com/storybook[22m
+[10:50:40.275] [INFO] [2m❌ @storybook/addon-vitest[22m
+[10:50:40.275] [INFO] [2m✅ @storybook/addon-a11y[22m
+[10:50:40.275] [INFO] [2m✅ @storybook/addon-docs[22m
+[10:50:40.275] [INFO] [2m✅ @storybook/addon-onboarding[22m
+[10:50:40.276] [INFO] Playwright browser binaries are necessary for @storybook/addon-vitest. The download can take some time. If you don't want to wait, you can skip the installation and run the following command manually later:
+[36mnpx playwright install chromium --with-deps[39m
+[10:50:49.134] [PROMPT] Do you want to install Playwright with Chromium now? {"choice":true}
+[10:50:49.134] [INFO] Installing Playwright browser binaries (press "c" to abort)
+[10:50:49.135] [INFO] playwright-installation-spinner-start: Installing Playwright browser binaries (press "c" to abort)
+[10:50:49.135] [DEBUG] Executing command: npx playwright install chromium --with-deps
+[10:50:49.585] [INFO] Playwright browser binaries installed successfully
+[10:50:49.585] [INFO] playwright-installation-spinner-stop: Playwright browser binaries installed successfully
+[10:50:50.249] [WARN] Storybook setup completed, but some non-blocking errors occurred. Please check the log file below for details.
+[10:50:50.250] [INFO] To run Storybook manually, run [36mnpm run storybook[39m. CTRL+C to stop.
+[10:50:50.250] [INFO] Wanna know more about Storybook? Check out [36mhttps://storybook.js.org/[39m
+Having trouble or want to chat? Join us at [36mhttps://discord.gg/storybook/[39m
