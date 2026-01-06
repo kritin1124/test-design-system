@@ -6,5 +6,5 @@ type ButtonProps = {
 };
 
 export const Button = ({ children }: ButtonProps) => {
-  return <button>{children}</button>;
+  return <button style={{ color: "red" ,backgroundColor:"blue"}}>{children}</button>;
 };
