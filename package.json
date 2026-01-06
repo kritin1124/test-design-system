@@ -1,40 +1,45 @@
 {
-  "name": "ds-test",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "@kritinpw/ds-test",
+  "version": "0.1.0",
+  "description": "Design system library",
+  "private": false,
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+   "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "scripts": {
-    "build": "npm run clean && npm run build:cjs && npm run build:esm",
+    "clean": "rm -rf dist",
     "build:cjs": "tsc",
-    "build:esm": "tsc -m es6 --outDir esm",
-    "clean": "del lib/* && del esm/*",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "build": "npm run clean && npm run build:cjs && npm run build:esm",
     "storybook": "storybook dev -p 6006",
-    "storybook:build": "build-storybook -o design-system",
-    "build-storybook": "storybook build"
+    "storybook:build": "storybook build"
   },
-  
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@storybook/react": "^10.1.11",
-    "del-cli": "^7.0.0",
-    "react": "^19.2.3",
-    "react-dom": "^19.2.3"
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
   },
+  "dependencies": {},
   "devDependencies": {
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
     "storybook": "^10.1.11",
+    "@storybook/react": "^10.1.11",
     "@storybook/react-vite": "^10.1.11",
-    "@chromatic-com/storybook": "^4.1.3",
     "@storybook/addon-vitest": "^10.1.11",
     "@storybook/addon-a11y": "^10.1.11",
     "@storybook/addon-docs": "^10.1.11",
     "@storybook/addon-onboarding": "^10.1.11",
-    "prop-types": "^15.8.1",
     "vitest": "^4.0.16",
-    "playwright": "^1.57.0",
+    "@vitest/coverage-v8": "^4.0.16",
     "@vitest/browser-playwright": "^4.0.16",
-    "@vitest/coverage-v8": "^4.0.16"
-  }
+    "playwright": "^1.57.0",
+    "prop-types": "^15.8.1"
+  },
+  "license": "MIT"
 }
