@@ -1,25 +1,38 @@
+// {
+//   "compilerOptions": {
+//     "target": "es2018",
+//     "module": "commonjs",
+
+//     "rootDir": "src",
+//     "outDir": "dist/cjs",
+
+//     "declaration": true,
+//     "declarationDir": "dist/types",
+
+//     "jsx": "react-jsx",
+//     "esModuleInterop": true,
+//     "allowSyntheticDefaultImports": true,
+
+//     "moduleResolution": "node",
+//     "lib": ["dom", "es2018"],
+
+//     "strict": true,
+//     "skipLibCheck": true,
+//     "forceConsistentCasingInFileNames": true
+//   },
+//   "include": ["src", "projects/button/src/Button.tsx", "projects/button/src/Button.stories.tsx"],
+//   "exclude": ["**/*.stories.ts", "**/*.stories.tsx"]
+// }
+
 {
   "compilerOptions": {
     "target": "es2018",
-    "module": "commonjs",
-
-    "rootDir": "src",
-    "outDir": "dist/cjs",
-
-    "declaration": true,
-    "declarationDir": "dist/types",
-
     "jsx": "react-jsx",
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-
     "moduleResolution": "node",
-    "lib": ["dom", "es2018"],
-
     "strict": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
-  },
-  "include": ["src"],
-  "exclude": ["**/*.stories.ts", "**/*.stories.tsx"]
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "lib": ["dom", "es2018"]
+  }
 }

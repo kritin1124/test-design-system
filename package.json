@@ -14,9 +14,8 @@
   },
   "scripts": {
     "clean": "rm -rf dist",
-    "build:cjs": "tsc",
-    "build:esm": "tsc -p tsconfig.esm.json",
-    "build": "npm run clean && npm run build:cjs && npm run build:esm",
+    "build:button": "tsc -p projects/button/tsconfig.json",
+    "build:navigation": "tsc -p projects/navigation/tsconfig.json",
     "storybook": "storybook dev -p 6006",
     "storybook:build": "storybook build"
   },
