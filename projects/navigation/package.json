@@ -1,0 +1,11 @@
+{
+  "name": "@kritinpw/test-button",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "files": ["dist"],
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  }
+}
