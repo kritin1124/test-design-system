@@ -1,4 +1,4 @@
 // projects/button/src/index.ts
 
-export * from "./lib/components/button/Button";
-export * from "./lib/components/buttonSplit/ButtonSplit";
+export * from "./ui/components/button/Button";
+export * from "./ui/components/buttonSplit/ButtonSplit";
