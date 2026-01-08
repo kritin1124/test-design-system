@@ -24,22 +24,45 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 18
           registry-url: https://registry.npmjs.org
 
-      - name: Install root deps
-        run: npm ci
+      - run: npm ci
 
       - name: Build module
         run: |
           cd projects/${{ inputs.module }}
           npm run build
+
+      - name: Bump version (test / latest)
+        run: |
+          cd projects/${{ inputs.module }}
+
+          if [ "${{ inputs.tag }}" = "test" ]; then
+            RAND=$(date +%s)
+            npm version prerelease \
+              --preid=test.$RAND \
+              -m "chore(${{
+                inputs.module
+              }}): release %s"
+          else
+            npm version patch \
+              -m "chore(${{
+                inputs.module
+              }}): release %s"
+          fi
+
+
+      - name: Push version commit
+        run: |
+          git push
+          git push --tags
 
       - name: Publish module
         run: |
