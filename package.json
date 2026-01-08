@@ -16,6 +16,7 @@
     "clean": "rm -rf dist",
     "build:button": "tsc -p projects/button/tsconfig.json",
     "build:navigation": "tsc -p projects/navigation/tsconfig.json",
+    "build:all": "npm run build:button && npm run build:navigation",
     "storybook": "storybook dev -p 6006",
     "storybook:build": "storybook build"
   },
