@@ -1,0 +1,49 @@
+name: Publish DS Module
+
+on:
+  workflow_dispatch:
+    inputs:
+      module:
+        description: "Module to publish"
+        required: true
+        type: choice
+        options:
+          - button
+          - navigation
+
+      tag:
+        description: "NPM dist-tag"
+        required: true
+        type: choice
+        options:
+          - test
+          - latest
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          registry-url: https://registry.npmjs.org
+
+      - name: Install root deps
+        run: npm ci
+
+      - name: Build module
+        run: |
+          cd projects/${{ inputs.module }}
+          npm run build
+
+      - name: Publish module
+        run: |
+          cd projects/${{ inputs.module }}
+          npm publish --tag ${{ inputs.tag }}
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
