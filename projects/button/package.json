@@ -3,7 +3,7 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
-  "version": "0.1.2-test.1767847577.0",
+  "version": "0.1.2-test.1767847980.0",
   "main": "dist/index.js",
   "types": "dist/types/index.d.ts",
   "files": [
